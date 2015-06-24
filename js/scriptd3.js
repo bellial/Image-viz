@@ -48,7 +48,7 @@ dsv(fileName,function(error,data){ console.log(data[0]);
     .attr("y",function(d,i){if(i==0){reset()}; return calcY();})
     .on("mouseover",function(d){
        var str = "<span>" + d.text + "</span><br>" + "<span>" + d.rt_count + "</span><br>";
-       viewBox.html(str).style("opacity",1);
+       viewBox.html(str).style("opacity",1).style("left", (d3.event.pageX +20) + "px").style("top", (d3.event.pageY - 12) + "px");
     });
   
 });
