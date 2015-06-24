@@ -23,8 +23,9 @@ reset();
 
 var increment = 2;
 var limit = 1000;
+var dsv = d3.dsv("|","text/plain");
 
-d3.csv(fileName,function(error,data){ console.log(data[0]);
+dsv(fileName,function(error,data){ console.log(data[0]);
   var svg = d3.select(insertPoint).append("svg")
     .attr("width", width + margin.left + margin.right + 200)
     .attr("height", height + margin.top + margin.bottom)
