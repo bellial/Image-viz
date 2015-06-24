@@ -10,8 +10,8 @@ var viewBox = d3.select("body")
 .style("text-align","center").style("border-radius","2px");
 
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
-    width = 1000 - margin.left - margin.right,
-    height = 1220 - margin.top - margin.bottom;
+    width = 10,
+    height = 10;
 
     
 var y;
