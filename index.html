@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Image Viz</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/styles.css"></link>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link href="css/fontawesome/css/font-awesome.min.css" rel="stylesheet"></link>
+    <link href="css/animate.css" rel="stylesheet"></link>
+    <link href="css/elastic.css" rel="stylesheet"></link>
+    <meta name="description" content="Loren Ipsum">
+    <meta property="og:title" content="Image Viz">
+    <meta property="og:site_name" content="Image Viz">
+    <meta property="og:description" content="Loren Ipsum">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+  </head>
+  
+  <body data-target="#myscrollspy" data-spy="scroll">
+  
+  <script type="text/javascript" src="js/scriptd3.js"></script>
+   
+    <header class="top" role="banner">
+      <div class="container">
+	<a class="navbar-brand pull-left smooth" href="#">Image Viz</a>
+	<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+	  <span class="glyphicon glyphicon-align-justify"></span>
+	</button>
+	<nav id="myscrollspy" class="navbar-collapse collapse " role="navigation">
+	<ul class="nav nav-justified ">
+	  <li class="">
+	    <a class="smooth" href="#home">top</a>
+	  </li>
+	  <li class="active">
+	    <a class="smooth" href="#spaceexplo1">Imagens</a>
+	  </li>
+	  <li class="">
+	    <a class="smooth" href="#section12">Sobre</a>
+	  </li>
+	</ul>
+	</nav>
+      </div>
+    </header>
+  
+    <div class="exploration">
+     
+      <div id="spazio1" class="container col-md-12 col-sm-12 col-xs-12"> </div>
+    
+      <div id="img-elastic" class="container-fluid image googleimages" style="opacity: 1;">
+	<div class="row side-all">
+	<div class="col-md-12 col-sm-12 main-viz">
+	<div class="graph">
+	<div class="container controls">
+	<div class="labels row">
+	  <div class="cmd-labels">
+	    <h3 class="size-lbl">tamanho</h3>
+	    <h3 class="show-lbl">mostrar</h3>
+	  </div>
+	</div>
+	<div class="viz_googleimages">
+	  <div class="slider slider-horizontal" style="width: 641px;">
+	  <div class="slider-track">
+	    <div class="slider-selection" style="left: 0%; width: 0%;"></div>
+	    <div class="slider-handle round" style="left: 0%;"></div>
+	    <div class="slider-handle round hide" style="left: 0%;"></div>
+	  </div>
+	  <div class="tooltip top" style="top: -35px; left: -427.5px;">
+	    <div class="tooltip-arrow"></div>
+	    <div class="tooltip-inner">12</div>
+	  </div>
+	    <div class="slider"></div>
+	  </div>
+	  <div class="rad" style="float:left; clear:right">
+	    <div class="btn-group show-lvl">
+	      <button id="language" class="btn btn-default btn-sm elstc-img active" type="button">Imagens</button>
+	      <button id="forum" class="btn btn-default btn-sm elstc-clr" type="button">Cores</button>
+	    </div>
+	  </div>
+	  <div class="controllers">
+	    <svg width="932" height="32" style="float:left"></svg>
+	  </div>
+	  <div class="img-filters list-labels">
+	    <h3>ordenar</h3>
+	    <div>
+	      <span class="sort" data-value="hue_median">cor</span>
+	    </div>
+	    <div>
+	      <span class="sort" data-value="saturation_median">saturação</span>
+	    </div>
+	    <div>
+	      <span class="sort sort-active" data-value="brightness_median">brilho</span>
+	    </div>
+	    <div>
+	  </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+<!--<script src="jquery/jquery-2.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script charset="utf-8" src="js/tip.js"></script>
+<script charset="utf-8" src="js/bootstrap-slider.js"></script>
+<script charset="utf-8" src="js/elastic.js"></script>
+<script>
+
+
+$('body').scrollspy({ target: "#myscrollspy", offset: 300 });
+
+$(document).ready(function(){
+    $('#download').each(function() {
+        animationHover(this, 'pulse');
+    });
+    $('.share').each(function() {
+        animationHover(this, 'swing');
+    });
+  
+});
+
+
+function animationHover(element, animation){
+    element = $(element);
+    element.hover(
+        function() {
+            element.addClass('animated ' + animation);        
+        },
+        function(){
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+        });
+}
+function animationClick(element, animation){
+    element = $(element);
+    element.click(
+        function() {
+            element.addClass('animated ' + animation);        
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+  
+        });
+}
+
+</script>
+<script>
+
+$(function() {
+  $('.smooth').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>-->
+</div>
+  </body>
+</html>
