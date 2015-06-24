@@ -10,7 +10,7 @@ h1, h2, h3, h4 {
 }
 
 body {
-  position: absolute;
+  position: relative;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
     letter-spacing:-2px;
 }
 .image-wrapper {
-position: relative;
+position: absolute;
 }
 .scale-image {
 display: block;
