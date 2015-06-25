@@ -10,8 +10,8 @@ var viewBox = d3.select("body")
 .style("text-align","center").style("border-radius","2px");
 
 var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = 1000 - margin.left - margin.right,
-    height = 1220 - margin.top - margin.bottom;
+    width = 800 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom;
 
     
 var y;
@@ -27,9 +27,10 @@ var dsv = d3.dsv("|","text/plain");
 
 dsv(fileName,function(error,data){ console.log(data[0]);
   var svg = d3.select(insertPoint).append("svg")
-    .attr("width", width + margin.left + margin.right + 200)
+    .attr("class","grid")
+     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+    .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
     data.sort(function(a,b){return (b.rt_count - a.rt_count);});
