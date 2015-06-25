@@ -1,3 +1,11 @@
+body .view{
+  z-index:100 !important;
+}
+body svg.grid{
+  position:absolute;
+  top:220px;
+  left:120px;
+}
 /* Google Images */
 .viz_googleimages text {
     font: 1em sans-serif;
