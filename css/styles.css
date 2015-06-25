@@ -68,14 +68,14 @@ img.center {
 #myscrollspy .active a {
 	color: #ffffff;
 	font-weight:400;
-		background: none; 
+	background: none; 
 	text-shadow: 2px 2px 10px #ccc;
 }
 
 .nav-justified li a:visited {
 	color: #ffffff;
 	font-weight:300;
-	background: none; 
+	background: #000; 
 }
 
 /* navbarshadow*/
@@ -655,7 +655,7 @@ margin-bottom: 50px;
 }
 
 
-/* exploration */
+/* Image Visualization */
 .introexplo {
 	font-size: 24px;
 	line-height: 35px;
@@ -666,26 +666,26 @@ margin-bottom: 50px;
     padding-bottom: 10px;
    
 }
- #spaceexplo1, #spaceexplo2{
+ #imgrid{
     min-height: 100px;
 }
 
-.exploration {
+.imgviz {
     background-color: #fff;
     clear:both;
 }
 
-.exploration .col-centered img{
+.imgviz .col-centered img{
     border: 0px solid #909090;
 }
 
-.exploration hr {
+.imgviz hr {
 border-top: 1px solid #ebebeb;
 width: 280px;
 margin-top: 20px;
 margin-bottom: 30px;
 }
-.exploration h3 {
+.imgviz h3 {
  text-align: center;
 	color: #000;
 	Padding-top: 20px;
@@ -700,9 +700,7 @@ margin-bottom: 30px;
 #spaziofonti {
     min-height: 50px; 
 }
-/*.exploration .howto {
 
-}*/
 	/* FFFFINDINGS  */
 .findings {
     background-color: #fff;
@@ -932,7 +930,7 @@ font-family: 'Open Sans', sans-serif;
     line-height:20px;
     padding-top:35px;   
 }
-#spazio1 {
+#box {
    min-height: 100px;
 }
 .exploratory h3 {
@@ -961,7 +959,7 @@ margin-bottom: 40px;
 .banner #startexplo {
 	padding-top: 20px;
 }
-.exploration #gotoexplo {
+.imgviz #gotoexplo {
 	padding-bottom:10px;
 }
 
@@ -1007,7 +1005,7 @@ margin-bottom: 40px;
 
 .bottom {
     background-color: #201D1E;
-    border-top: 5px solid #43BBD0;
+    border-top: 5px solid #999;
 }
 .bottom .container {
     background-color: #201D1E;
@@ -1018,16 +1016,12 @@ margin-bottom: 40px;
 	text-align: left;
 	font-family: 'Open Sans', sans-serif;
 	font-style: normal;
-	color: #43BBD0;
+	color: #999;
 	text-transform:uppercase;
 	font-weight:600;
 	letter-spacing:1px;
     font-size: 11px;
 
-} 
-
-.bottom #loghi {
-     padding-top: 15px;
 } 
 
 #cmoda {
@@ -1161,6 +1155,6 @@ margin: 0 auto;
 
 /*sections ids*/
 
-#section1, #section2, #section3, #section4, #section5, #section6, #section6, #section7, #section8, #home, #section10, #section11, #section12, #spaceexplo1, #spaceexplo2{
+#home, #abt, #imgrid{
 	padding-top: 50px;
 }
