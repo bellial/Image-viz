@@ -57,7 +57,7 @@ function elastic(fullCont,vizCont, imgFolder, imgFile) {
     init = function () {
 
         $(fullCont + ".progress-cont").fadeOut(500, function () {
-            $(fullCont + '.googleimages').css("opacity", 1)
+            $(fullCont + '.twitterimages').css("opacity", 1)
         });
 
         ndata = d3.nest()
@@ -714,4 +714,4 @@ function elastic(fullCont,vizCont, imgFolder, imgFile) {
     }
 }
 
-elastic(".image","#img-elastic","data/images/","data/Est_Imagens.csv");
+elastic(".image","#img-elastic","data/images/","tweets_imagens.csv");
