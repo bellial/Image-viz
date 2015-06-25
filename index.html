@@ -17,12 +17,16 @@
     <meta property="og:site_name" content="Image Viz">
     <meta property="og:description" content="Loren Ipsum">
     <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="jquery/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </head>
   
-  <body data-target="#myscrollspy" data-spy="scroll">
-  <script type="text/javascript" src="js/scriptd3.js"></script>
-  
-   
+  <body>
+    <script type="text/javascript" src="js/scriptd3.js"></script>
+    <script charset="utf-8" src="js/tip.js"></script>
+    <script charset="utf-8" src="js/bootstrap-slider.js"></script>
+    <script charset="utf-8" src="js/elastic.js"></script>
+    
     <header class="top" role="banner">
       <div class="container">
 	<a class="navbar-brand pull-left smooth" href="#">Image Viz</a>
@@ -30,51 +34,48 @@
 	  <span class="glyphicon glyphicon-align-justify"></span>
 	</button>
 	<nav id="myscrollspy" class="navbar-collapse collapse " role="navigation">
-	<ul class="nav nav-justified ">
-	  <li class="">
-	    <a class="smooth" href="#home">top</a>
-	  </li>
-	  <li class="active">
-	    <a class="smooth" href="#spaceexplo1">Imagens</a>
-	  </li>
-	  <li class="">
-	    <a class="smooth" href="#section12">Sobre</a>
-	  </li>
-	</ul>
+	  <ul class="nav nav-justified">
+	    <li class="">
+	      <a class="smooth" href="#home">top</a>
+	    </li>
+	    <li class="active">
+	      <a class="smooth" href="#imgrid">Imagens</a>
+	    </li>
+	    <li class="">
+	      <a class="smooth" href="#abt">Sobre</a>
+	    </li>
+	  </ul>
 	</nav>
-      </div>
+      </div><!--header container-->
     </header>
   
-    <div class="exploration">
-     	
-      <div id="spazio1"> </div>
-    
-      <div class="container-fluid image googleimages" style="opacity: 1;">
+    <div class="imgviz">
+      <div id="box"></div>    
+      <div class="container-fluid image twitterimages" style="opacity: 1;">
 	<div class="container controls">
 	<div class="labels row">
 	  <div class="cmd-labels">
 	    <h3 class="size-lbl">tamanho</h3>
 	    <h3 class="show-lbl">mostrar</h3>
 	  </div>
-	</div>
-	  <div class="slider slider-horizontal" style="width: 641px;">
-	  
-	  <div class="slider-track">
-	    <div class="slider-selection" style="left: 0%; width: 0%;"></div>
-	    <div class="slider-handle round" style="left: 0%;"></div>
-	    <div class="slider-handle round hide" style="left: 0%;"></div>
-	  </div>
+	</div><!--labels-->
+	  <div class="slider slider-horizontal" style="width: 641px;">	  
+	    <div class="slider-track">
+	      <div class="slider-selection" style="left: 0%; width: 0%;"></div>
+	      <div class="slider-handle round" style="left: 0%;"></div>
+	      <div class="slider-handle round hide" style="left: 0%;"></div>
+	    </div><!--slider-track-->
 	    <div class="slider"></div>
-	  </div>
+	  </div><!--slider-horizontal-->
 	  <div class="rad" style="float:left; clear:right">
 	    <div class="btn-group show-lvl">
 	      <button id="language" class="btn btn-default btn-sm elstc-img active" type="button">Imagens</button>
 	      <button id="forum" class="btn btn-default btn-sm elstc-clr" type="button">Cores</button>
 	    </div>
-	  </div>
+	  </div><!--rad-->
 	  <div class="controllers">
-	     	<svg width="900" height="32" style="float:left"></svg>
-	   </div>
+	    <svg width="900" height="32" style="float:left"></svg>
+	  </div>
 	  <div class="img-filters list-labels controllers">
 	    <h3>ordenar</h3>
 	    <div>
@@ -86,8 +87,108 @@
 	    <div>
 	      <span class="sort sort-active" data-value="brightness_median">brilho</span>
 	    </div>
-	   </div>
-	</div>
-</div>
+	   </div><!--img-filters-->
+	</div><!--controlls-->
+      </div><!--twitterimages-->
+    
+    <div id="abt" class="bottom">
+      <!--<div id="footer" class="container">
+	<div class="col-md-4">
+	  <h5>project by</h5>
+	  <p>
+	    <a id="projectby" target="_blank" href="#">
+	    <span></span>
+	    </a>
+	    <br>
+	  </p>
+	</div><!--project by
+	<div class="col-md-4">
+	  <h5>developed Within</h5>	  
+	  <p></p>
+	</div><!--developed within
+	<div class="col-md-4">
+	  <h5>Share</h5>
+	  <p>
+	    <a class="share" href="#" target="_blank">
+	      <span class="fa fa-twitter"></span>
+	    </a>
+	    <a class="share" href="#" target="_blank">
+	      <span class="fa fa-facebook"></span>
+	    </a>
+	    <a class="share" href="#" target="_blank">
+	      <i class="fa fa-google-plus "></i>
+	    </a>
+	    <a class="share" href="#" target="_blank">
+	      <i class="fa fa-weibo"></i>
+	    </a>
+	    <a class="share" href="#">
+	      <i class="fa fa-envelope"></i>
+	    </a>
+	  </p>
+	</div><!--share
+      </div><!--footer-->
+    </div><!--abt-->
+    
+    <script>
+	$('body').scrollspy({ target: "#myscrollspy", offset: 300 });
+
+	$(document).ready(function(){
+	  $('#download').each(function() {
+	      animationHover(this, 'pulse');
+	  });
+	  $('.share').each(function() {
+	      animationHover(this, 'swing');
+	  });
+	
+	});
+
+
+	function animationHover(element, animation){
+	  element = $(element);
+	  element.hover(
+	      function() {
+		  element.addClass('animated ' + animation);        
+	      },
+	      function(){
+		  //wait for animation to finish before removing classes
+		  window.setTimeout( function(){
+		      element.removeClass('animated ' + animation);
+		  }, 2000);         
+	      });
+	}
+	function animationClick(element, animation){
+	  element = $(element);
+	  element.click(
+	      function() {
+		  element.addClass('animated ' + animation);        
+		  //wait for animation to finish before removing classes
+		  window.setTimeout( function(){
+		      element.removeClass('animated ' + animation);
+		  }, 2000);         
+	
+	      });
+	}
+    </script>
+      
+    <script>
+    $(function() {
+      $('.smooth').click(function() {
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	  var target = $(this.hash);
+	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	  if (target.length) {
+	    $('html,body').animate({
+	      scrollTop: target.offset().top
+	    }, 1000);
+	    return false;
+	  }
+	}
+      });
+    });
+    </script>
+    
+    </div><!--imgviz-->
+    
   </body>
+  
 </html>
