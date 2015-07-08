@@ -18,11 +18,11 @@
     <meta property="og:description" content="Loren Ipsum">
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="jquery/jquery-2.1.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </head>
+    <script src="js/bootstrap.min.js"></script>   
+   </head>
   
   <body>
-    <script type="text/javascript" src="js/scriptd3.js"></script>
+    <script type="text/javascript" src="scriptd3.js"></script>
     <script charset="utf-8" src="js/tip.js"></script>
     <script charset="utf-8" src="js/bootstrap-slider.js"></script>
     <script charset="utf-8" src="js/elastic.js"></script>
@@ -79,13 +79,13 @@
 	  <div class="img-filters list-labels controllers">
 	    <h3>ordenar</h3>
 	    <div>
-	      <span class="sort" onclick="cor()">cor</span>
+	      <span class="sort" id="cor" onclick="cor()">cor</span>
 	    </div>
 	    <div>
-	      <span class="sort" data-value="saturation_median">saturação</span>
+	      <span class="sort" id="sat" onclick="sat()">saturação</span>
 	    </div>
 	    <div>
-	      <span class="sort sort-active" data-value="brightness_median">brilho</span>
+	      <span class="sort sort-active" id="brilho" onclick="brilho()">brilho</span>
 	    </div>
 	   </div><!--img-filters-->
 	</div><!--controlls-->
@@ -129,7 +129,7 @@
       </div><!--footer-->
     </div><!--abt-->
     
-   <!-- <script>
+   <!--<script>
 	$('body').scrollspy({ target: "#myscrollspy", offset: 300 });
 
 	$(document).ready(function(){
@@ -186,7 +186,7 @@
       });
     });
     </script>-->
-        
+
     </div><!--imgviz-->
     
   </body>
